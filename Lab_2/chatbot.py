@@ -23,7 +23,10 @@ def main():
     # Load the configuration data from file
     logging.info('INIT: Loading configuration...')
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read('../config.ini', encoding='utf-8')
+
+    global gpt
+    gpt = ChatGPT(config)
 
     # Create an Application for your bot
     logging.info('INIT: Connecting the Telegram bot...')
@@ -36,9 +39,6 @@ def main():
     # Start the bot
     logging.info('INIT: Initialization done!')
     app.run_polling()
-
-    global gpt
-    gpt = ChatGPT(config)
 
 async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # await update.message.reply_text(response)
