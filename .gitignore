@@ -2,6 +2,7 @@
 # node_modules/
 # dist/
 # build/
+__pycache__/
 
 # 2. 忽略指定后缀的所有文件（* 代表所有）
 # *.log
