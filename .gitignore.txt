@@ -1,1 +1,2 @@
+.gitignore
 Lab_2/config.ini
