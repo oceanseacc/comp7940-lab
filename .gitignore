@@ -1,0 +1,16 @@
+# 1. 忽略整个文件夹（文件夹名 + /）
+# node_modules/
+# dist/
+# build/
+
+# 2. 忽略指定后缀的所有文件（* 代表所有）
+# *.log
+# *.tmp
+# *.zip
+
+# 3. 忽略单个具体文件
+# .env
+# .DS_Store
+# idea/
+
+config.ini
