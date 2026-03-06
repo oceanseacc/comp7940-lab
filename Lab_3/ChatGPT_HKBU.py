@@ -47,7 +47,7 @@ class ChatGPT:
         response = requests.post(self.url, json=payload, headers=self.headers)
 
         # 新增：打印API响应状态和错误信息
-        print(f"API Status: {response.status_code}, Error: {response.text}")
+        # print(f"API Status: {response.status_code}, Error: {response.text}")
 
         # If successful, return the assistant’s reply text
         if response.status_code == 200:
@@ -60,7 +60,7 @@ class ChatGPT:
 if __name__ == '__main__':
     # Load configuration from ini file
     config = configparser.ConfigParser()
-    config.read('../config.ini', encoding='utf-8')
+    config.read('config.ini', encoding='utf-8')
 
     # Initialize ChatGPT client
     chatGPT = ChatGPT(config)
