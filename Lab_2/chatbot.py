@@ -2,6 +2,8 @@
 This program requires the following modules:
 - python-telegram-bot==22.5
 - urllib3==2.6.2
+
+Tips:进入目录Lab_2下再运行python chatbot.py
 '''
 import sys
 from pathlib import Path
