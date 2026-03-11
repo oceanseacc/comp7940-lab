@@ -3,14 +3,14 @@ This program requires the following modules:
 - python-telegram-bot==22.5
 - urllib3==2.6.2
 
-Tips:进入目录Lab_2下再运行python chatbot.py
 '''
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))  # 把上级目录（comp7940-lab）加入Python搜索路径
 
-from Lab_3.ChatGPT_HKBU import ChatGPT
 gpt = None
+from ChatGPT_HKBU import ChatGPT
+
 
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
@@ -25,7 +25,7 @@ def main():
     # Load the configuration data from file
     logging.info('INIT: Loading configuration...')
     config = configparser.ConfigParser()
-    config.read('../config.ini', encoding='utf-8')
+    config.read('config.ini', encoding='utf-8')
 
     global gpt
     gpt = ChatGPT(config)
